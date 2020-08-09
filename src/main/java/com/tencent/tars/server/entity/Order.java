@@ -8,29 +8,36 @@ import lombok.ToString;
 
 import java.io.Serializable;
 import java.util.Date;
+import java.util.List;
+
 
 @Setter
 @Getter
 @ToString
 @NoArgsConstructor
-public class Answer implements Serializable {
+public class Order implements Serializable {
 
-  private Long aid;
+  private Long oid;
 
   private Long qid;
 
-  private String answerUid;
+  private Long aid;
 
-  private String aContent;
+  private String url;
 
-  private String pid;
+  private int is_paid;
+
+  private int is_answered;
+
+  private int is_commented;
 
   @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss")
-  private Date answerTime;
+  private Date order_time;
 
-  private Double score;
+  @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss")
+  private Date paid_time;
 
-  private String comment;
+  private int refund;
 
 
 }
