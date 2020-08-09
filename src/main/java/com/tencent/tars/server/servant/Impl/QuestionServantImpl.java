@@ -70,7 +70,7 @@ public class QuestionServantImpl implements QuestionServant {
    // Question question = (Question) redisTemplate.opsForValue().get("question"+qid);
 //    if(question==null) {
 //      log.info("cannot find it in redis");
-    Question question = searchOneQuestion(qid);
+    Question question = questionDao.searchOneQuestion(qid);
   //  }
     if(question==null) {
       return ResultUtil.empty(new Result());
@@ -105,11 +105,12 @@ public class QuestionServantImpl implements QuestionServant {
 
   }
 
-  public Question searchOneQuestion(Long qid) {
+  public Result searchOneQuestion(Long qid) {
     if(qid<=0) {
       return null;
     }
-    return questionDao.searchOneQuestion(qid);
+    Question question = questionDao.searchOneQuestion(qid);
+    return ResultUtil.qSucc(new Result(),question,"search");
   }
 
 
@@ -119,7 +120,7 @@ public class QuestionServantImpl implements QuestionServant {
 //      redisTemplate.delete("question"+qid);
 //    if(question==null) {
 //      log.info("cannot find in redis");
-      Question question = searchOneQuestion(qid);
+      Question question = questionDao.searchOneQuestion(qid);
    // }
     if(question==null)
       return ResultUtil.empty(new Result());
@@ -135,8 +136,8 @@ public class QuestionServantImpl implements QuestionServant {
   }
 
 
-  public List<Question> listAllQuestions() {
-    return questionDao.listAllQuestion();
+  public Result listAllQuestions() {
+    return ResultUtil.SearchSucc(new Result(),questionDao.listAllQuestion(),"search");
 
   }
 
