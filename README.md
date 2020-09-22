@@ -28,8 +28,7 @@ Question and Answer Community Website
 
 ## UI example
 ![ui](https://github.com/Srat333/mini-program-frontend/blob/master/ui.png)
-## 
-
+## Architecture
 ![architecture](https://github.com/Srat333/qa-tars-client/blob/master/tarsproject.png)
 
 ## Code Directory
