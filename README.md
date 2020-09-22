@@ -11,7 +11,7 @@ Question and Answer Community Website
 - [x] Audit
 - [x] Comment
 - [x] Details Page
-- [x] History Orders
+- [x] Check Orders Status
   * unpaid
   * uncommented
   * finished
