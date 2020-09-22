@@ -30,7 +30,7 @@ Question and Answer Community Website
 ![ui](https://github.com/Srat333/mini-program-frontend/blob/master/ui.png)
 ## 
 
-![architecture](https://github.com/Srat333/qa-tars-client/blob/master/tarsproject.jpg)
+![architecture](https://github.com/Srat333/qa-tars-client/blob/master/tarsproject (5).png)
 
 ## Code Directory
 ### frontend
